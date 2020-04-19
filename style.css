@@ -22,7 +22,7 @@ body {
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
-	overflow: hidden;
+	
 }
 
 .main__nav-container{
@@ -62,7 +62,7 @@ body {
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
-	overflow-x: hidden;
+	overflow: hidden;
 	position: absolute;
 	display: flex;
 }
@@ -207,4 +207,25 @@ body {
 	text-align: center;
 	margin: 25vh auto 50px;
 	
+}
+.quiz__container{
+	border: 1px solid #fdd4d4;
+	border-radius: 10px;
+	padding: 30px 15px;
+	
+}
+.quiz__form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.quiz__questions{
+	display: flex;
+}
+.quiz__question{
+	width: 250px;
+	height: max-content;
+	margin: 5px;
+	border: 1px solid white;
 }
