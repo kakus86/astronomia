@@ -1,0 +1,210 @@
+*{
+	box-sizing: border-box;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #000;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #fdd4d4;
+}
+
+.main{
+	width: 100%;
+    height: 100vh;
+	margin: 0px;
+    padding: 0px;
+	background-image: url(/stars.jpg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	
+}
+
+.main__nav-container{
+	display: flex;
+	position: fixed;
+    width: 100%;
+	height: 25vh;
+	top: 0px;
+	background-image: linear-gradient(black 60%,  transparent );
+	justify-content: space-between;
+	align-items: flex-start;
+	z-index: 2;
+}
+.main__nav-logo{
+	font-size: 40px;
+	font-weight: normal;
+	padding-left: 40px;
+	margin: 10px;
+}
+.main__nav-menu{
+	display: flex;
+	list-style: none;
+	font-size: 20px;
+}
+.main__nav-menu-item{
+	padding: 0px 40px 0px 20px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.main__stars {
+	width: 100%;
+    height: 100vh;
+	margin: 0px;
+    padding: 0px;
+	background-image: url(/stars.jpg);
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow-x: hidden;
+	position: absolute;
+	display: flex;
+}
+.main__stars-item {
+	margin: 30px;
+	width: 60px;
+	height: 60px;
+	position: relative;
+    animation: fall 4s linear infinite;
+}
+@keyframes fall {
+	0% {top: -60px;}
+	100% {top: 400px;}
+}
+.main__stars-item2 {
+	margin: 30px;
+	width: 50px;
+	height: 50px;
+	position: relative;
+    animation: fall2 5s linear infinite;
+}
+@keyframes fall2 {
+	0% {top: -70px;}
+	100% {top: 400px;}
+}
+.main__stars-item3 {
+	margin: 30px;
+	width: 30px;
+	height: 30px;
+	position: relative;
+    animation: fall3 6s linear infinite;
+}
+@keyframes fall3 {
+	0% {top: -30px;}
+	100% {top: 400px;}
+}
+.solar-system{
+	width: 100vw;
+	min-height: 100vh;
+	margin: 30px 0px;
+	text-align: justify;
+}
+.solar-system__header{
+
+	text-align: center;
+	margin: 25vh auto 50px;
+}
+.solar-system__image{
+	width: 100vw;
+	object-fit: cover;
+
+}
+.solar-system__about{
+	padding: 30px;
+}
+.solar-system__container{
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+.solar-system__planet{
+	width: 400px;
+	height: 300px;
+	margin: 10px;
+	border: 2px solid #fff;
+}
+
+.solar-system__planet-opis{
+	opacity: 0;
+	width: 396px;
+	height: 296px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: 1s opacity;
+}
+.solar-system__planet-opis:hover{
+	opacity: 1;
+}
+
+.solar-system__planet-image{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	
+}
+.gallery{
+	
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.gallery__header{
+
+	text-align: center;
+	margin: 25vh auto 50px;
+	
+}
+
+.gallery__content{	
+	overflow: hidden;
+}
+.gallery__container{
+	width: max-content;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	
+	z-index:-1;
+	animation: photo 100s linear infinite;
+}
+@keyframes photo{
+	0%{left:0}
+	50%{left: -200vw}
+	100%{left:0}
+}
+
+.gallery__item{
+	width: 360px;
+	height: 280px;
+	margin: 5px;
+	z-index: 100;
+	object-fit: cover;
+}
+.quiz{
+	padding: 30px;
+	width: 100vw;
+	min-height: 100vh;
+	margin: 60px 0px;
+}
+.quiz__header{
+
+	text-align: center;
+	margin: 25vh auto 50px;
+	
+}
