@@ -18,7 +18,7 @@ body {
     height: 100vh;
 	margin: 0px;
     padding: 0px;
-	background-image: url(/stars.jpg);
+	background-image: url(/images/stars.jpg);
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
