@@ -22,7 +22,7 @@ body {
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
-	
+	overflow: hidden;
 }
 
 .main__nav-container{
