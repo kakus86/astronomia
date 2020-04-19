@@ -188,7 +188,9 @@ body {
 	50%{left: -200vw}
 	100%{left:0}
 }
-
+.gallery__container:hover{
+	animation-play-state: paused;
+}
 .gallery__item{
 	width: 360px;
 	height: 280px;
@@ -196,11 +198,9 @@ body {
 	z-index: 100;
 	object-fit: cover;
 }
-.gallery__container:hover{
-	animation-play-state:paused;
-}
+
 .quiz{
-	padding: 30px;
+
 	width: 100vw;
 	min-height: 100vh;
 	margin: 60px 0px;
@@ -214,7 +214,7 @@ body {
 .quiz__container{
 	
 	border-radius: 10px;
-	padding: 10px 15px;
+	padding: 0px 15px;
 	
 }
 .quiz__form{
@@ -232,13 +232,16 @@ body {
 }
 .quiz__question{
 	width: 350px;
-	height: 150px;
+	height: 200px;
 	margin: 15px;
 	padding: 20px;
+	
 }
 .good{
 	background-color: green;
+	margin-top: 10px;
 }
 .bad{
-background-color: red;
+	background-color: red;
+	margin-top: 10px;
 }
