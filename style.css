@@ -17,7 +17,7 @@ body {
     height: 100vh;
 	margin: 0px;
     padding: 0px;
-	background-image: url(images/stars.jpg);
+	background-image: url(images/stars.jpg);/*Photo by Greg Rakozy on Unsplash*/
 	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
@@ -25,8 +25,8 @@ body {
 .main__nav-container{
 	display: flex;
 	position: fixed;
-    width: 100%;
-	height: 25vh;
+    width: 100vw;
+	height: 20vh;
 	top: 0px;
 	background-image: linear-gradient(black 60%,  transparent );
 	justify-content: space-between;
@@ -52,56 +52,17 @@ body {
 	text-decoration: none;
 	color: inherit;
 	width: max-content;
-
+	border-bottom: 2px solid transparent;
 }
 .main__nav-menu-item:hover{
 	border-bottom: 2px solid #fdd4d4;
 	
 }
 
-@media(max-width:991px){
-    .main__nav-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: black;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-50%)
-    }
-}
-@media(max-width: 991px){ 
-    
-    .main__nav-menu--open {
-        opacity: 1;
-        pointer-events: unset;
-        transform: unset;
-    }   
-   
-}
 .main__nav-mobile-button {
     display: none;
 }
-@media(max-width: 991px){
-    .main__nav-mobile-button {
-        display: unset;
-        background: none;
-        border: none;
-		padding: 0;
-		cursor: pointer;
-    } 
-}
-@media(max-width: 991px){
-    .main__nav-mobile-button-image {
-        display: block;
-        width: 25px;
-    } 
-}
+
 .main__stars {
 	width: 100%;
     height: 100vh;
@@ -123,8 +84,9 @@ body {
     animation: fall 4s linear infinite;
 }
 @keyframes fall {
-	0% {top: -60px;}
-	100% {top: 400px;}
+	0% {top: -60px; opacity:1;}
+	90% {opacity:1;}
+	100% {top: 400px; opacity: 0;}
 }
 .main__stars-item2 {
 	margin: 30px;
@@ -134,8 +96,10 @@ body {
     animation: fall2 5s linear infinite;
 }
 @keyframes fall2 {
-	0% {top: -70px;}
-	100% {top: 400px;}
+	0% {top: -70px; opacity:1;}
+	90% {opacity:1;}
+	100% {top: 400px; opacity: 0;}
+	
 }
 .main__stars-item3 {
 	margin: 30px;
@@ -145,8 +109,61 @@ body {
     animation: fall3 6s linear infinite;
 }
 @keyframes fall3 {
-	0% {top: -30px;}
-	100% {top: 400px;}
+	0% {top: -30px; opacity:1;}
+	90% {opacity:1;}
+	100% {top: 400px; opacity: 0;}
+
+}
+/************USTAWIENIA @media DO MAIN**********/
+
+@media(max-width:991px){
+	.main__nav-container{
+		height: 60px;
+		
+	}
+	.main__nav-logo{
+		padding-left: 10px;
+	}
+    .main__nav-menu {
+		position: fixed;
+		width: 100vw;
+        top: 0;
+        left: 0;
+        bottom: 0;
+		right: 0;
+		margin:0;
+		padding: 0;
+		background-image: url(images/small.jpg);/*Photo by Bartek Garbowicz on Unsplash*/
+		background-size: cover;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-50%)
+    }
+    .main__nav-menu--open {
+        opacity: 1;
+        pointer-events: unset;
+        transform: unset;
+	}   
+	.main__nav-menu-item{
+		margin: 30px 20px 0px 20px;
+		border-bottom: 2px solid transparent;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+    .main__nav-mobile-button {
+        display: unset;
+        background: none;
+        border: none;
+		margin: 5px 20px;
+		cursor: pointer;
+    } 
+    .main__nav-mobile-button-image {
+        display: block;
+        width: 25px;
+    } 
 }
 .solar-system{
 	width: 100vw;
@@ -157,7 +174,7 @@ body {
 .solar-system__header{
 
 	text-align: center;
-	margin: 25vh auto 50px;
+	margin: 20vh auto 50px;
 }
 .solar-system__image{
 	width: 100vw;
@@ -199,6 +216,14 @@ body {
 .solar-system__planet-opis:hover{
 	opacity: 1;
 }
+.bonus{
+	cursor: pointer;
+	opacity: 0.8;
+	transition: 1s opacity;
+}
+.bonus:hover{
+	opacity: 1;
+}
 .solar-system__planet-bonus{
 	width: 396px;
 	height: 296px;
@@ -218,6 +243,33 @@ body {
 	object-fit: contain;
 	
 }
+/************USTAWIENIA @media DO UKŁAD SŁONECZNY**********/
+
+@media(max-width:991px){
+	.solar-system__header{
+		margin: 40px auto 20px;
+	}
+	.solar-system__planet{
+		width: 300px;
+		height: 200px;
+	}
+	
+	.solar-system__planet-opis{
+		
+		width: 296px;
+		height: 196px;
+		cursor: pointer;
+		font-size: 10px;
+	}
+	.solar-system__planet-opisl:hover{
+		opacity: 1;
+	}
+	.solar-system__planet-bonus{
+		width: 296px;
+		height: 196px;
+	}
+}
+
 .gallery{
 	
 	width: 100vw;
@@ -227,7 +279,7 @@ body {
 .gallery__header{
 
 	text-align: center;
-	margin: 25vh auto 50px;
+	margin: 20vh auto 50px;
 	
 }
 
@@ -252,13 +304,26 @@ body {
 	animation-play-state: paused;
 }
 .gallery__item{
-	width: 300px;
-	height: 200px;
+	width: 400px;
+	height: 300px;
 	margin: 5px;
 	z-index: 100;
 	object-fit: cover;
 }
+/************USTAWIENIA @media DO GALERIA**********/
 
+@media(max-width:991px){
+	.gallery__header{
+		margin: 40px auto 20px;		
+	}
+	.gallery__container{
+		animation: photo 50s linear infinite;
+	}
+	.gallery__item{
+		width: 300px;
+		height: 200px;
+	}
+}
 .quiz{
 
 	width: 100vw;
@@ -268,65 +333,133 @@ body {
 .quiz__header{
 
 	text-align: center;
-	margin: 25vh auto 50px;
+	margin: 20vh auto 50px;
 	
-}
-.quiz__container{
-	
-	border-radius: 10px;
-	padding: 0px 15px;
-	
-}
-.quiz__form{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.quiz__questions{
-	display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-	padding: 10px;
-	list-style: none;
-}
-.quiz__question{
-	width: 350px;
-	height: 200px;
-	margin: 15px;
-	padding: 20px;
-	
-}
-.quiz__question label{
-	cursor: pointer;
-}
-
-.quiz__button-container{
-	display: flex;
 }
 .quiz__button{
-	width: 120px;
-	height: 60px;
-	padding: 1vw;
-	margin: 10px;
+	width: 150px;
+	
+}
+.button{
+	padding: 20px;
+	background-color: #fdd4d4;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px;
+	border: 1px solid #fdd4d4;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.button:hover{
+	border: 1px solid #fdd4d4;
 	background-color: transparent;
 	color: #fdd4d4;
-	border: 2px solid #fdd4d4;
-	font-size: 1.2vw;
-	font-weight: bold;
-	font-family: 'Josefin Sans', sans-serif;
-	cursor: pointer;
-	transition: 1s;
 }
-.quiz__button:hover{
-	background-color: #fdd4d4;
-	color: #000;
+.quiz__container{
+	background-image: url("images/small.jpg");
+	border-radius: 10px;
+	padding: 0px 15px;
+    width: 1000px;
+    min-height: 530px;
+    margin: 40px auto;
+	border: 2px solid #fdd4d4;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.quiz__questions{
+	width: 100%;
+	font-size: 30px;
+    color: #fdd4d4;
+	display: flex;
+	flex-direction: column;
+}
+.quiz__question{
+	width: 100%;
+	margin-left: 20px;
+}
+
+.quiz__item{
+	cursor: pointer;
+	display: block;
+	margin: 15px 20px;
+	
+}
+.massage{
+	width: 50%;
+	min-height: 120px;
+	margin: 0 auto;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.check {
+	margin: 20px auto;
 }
 .good{
-	background-color: green;
-	margin-top: 10px;
+    background-color: green;
+	border-radius: 5px;
+	padding: 10px;
 }
 .bad{
-	background-color: red;
-	margin-top: 10px;
+    background-color: red;
+	border-radius: 5px;
+	padding: 10px;
+}
+.koniec{
+	align-self: center;
+	justify-self: center;
+}
+/************USTAWIENIA @media DO QUIZ**********/
+
+@media(max-width:991px){
+	.quiz{
+		padding: 5px;
+		width: 100%;
+	}
+	
+	.button{
+		font-weight: normal;
+	}
+	.quiz__container{
+		width: 100%;
+		min-height: 530px;
+	}
+	.quiz__questions{
+		font-size: 20px;
+	}
+	.quiz__question{
+		margin: 5px;
+		margin-left: unset;
+	}
+	.massage{
+		width: 95%;
+		font-size: 20px;
+	}
+	
+	
+	.koniec{
+		align-self: center;
+		justify-self: center;
+	}
+}
+.footer{
+    width: 100vw;
+    padding: 5px 0px;
+    color: #000;
+    background-color: #fdd4d4;
+    font-size: 0.6vw;
+    bottom: 0px;
+    align-self: center;
+    text-align: center;
+}
+/************USTAWIENIA @media DO QUIZ**********/
+
+@media(max-width:991px){
+	.footer{
+		font-size: 10px;
+	}
 }

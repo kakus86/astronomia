@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tytuł strony</title>
+    <link rel="shortcut icon" href="images/planet.ico" type="image/x-icon"/>
+    <title>Astronomia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link
@@ -17,7 +18,7 @@
     <section class="main" id="main">
         <nav class="main__nav-container">
             <h1 class="main__nav-logo">Astronomia</h1>
-            <ul class="main__nav-menu">
+            <ul class="main__nav-menu js-main__nav-menu">
                 <a href="#main" class="main__nav-menu-item">
                     <li>Strona główna</li>
                 </a>
@@ -31,21 +32,24 @@
                     <li>Quiz</li>
                 </a>
             </ul>
+            <button class="main__nav-mobile-button js-main__nav-mobile-button">
+                <img src="images/navigation.png" alt="otwórz/zamknij" class="main__nav-mobile-button-image">
+            </button>
         </nav>
         <div class="main__stars">
-            <img src="/images/star.png" class="main__stars-item3">
-            <img src="/images/star.png" class="main__stars-item">
-            <img src="/images/star.png" class="main__stars-item2">
-            <img src="/images/star.png" class="main__stars-item3">
-            <img src="/images/star.png" class="main__stars-item">
-            <img src="/images/star.png" class="main__stars-item2">
-            <img src="/images/star.png" class="main__stars-item3">
-            <img src="/images/star.png" class="main__stars-item">
-            <img src="/images/star.png" class="main__stars-item2">
-            <img src="/images/star.png" class="main__stars-item3">
-            <img src="/images/star.png" class="main__stars-item">
-            <img src="/images/star.png" class="main__stars-item2">
-            <img src="/images/star.png" class="main__stars-item3">
+            <img src="images/star.png" class="main__stars-item3">
+            <img src="images/star.png" class="main__stars-item">
+            <img src="images/star.png" class="main__stars-item2">
+            <img src="images/star.png" class="main__stars-item3">
+            <img src="images/star.png" class="main__stars-item">
+            <img src="images/star.png" class="main__stars-item2">
+            <img src="images/star.png" class="main__stars-item3">
+            <img src="images/star.png" class="main__stars-item">
+            <img src="images/star.png" class="main__stars-item2">
+            <img src="images/star.png" class="main__stars-item3">
+            <img src="images/star.png" class="main__stars-item">
+            <img src="images/star.png" class="main__stars-item2">
+            <img src="images/star.png" class="main__stars-item3">
         </div>
 
     </section>
@@ -53,7 +57,7 @@
 
     <section class="solar-system" id="solar-system">
         <h1 class="solar-system__header">Układ słoneczny</h1>
-        <img class="solar-system__image" src="/images/uklad.jpg" alt="Układ słoneczny">
+        <img class="solar-system__image" src="images/uklad.jpg" alt="Układ słoneczny">
         <div class="solar-system__about">
             <p>Układ słoneczny jest układem planetarnym w galaktyce Drogi Mlecznej, składającym się ze Słońca i
                 powiązanych z nim grawitacyjnie
@@ -82,10 +86,12 @@
                         <li>Typ planety: planeta skalista</li>
                         <li>Temperatura powierzchni od −173 °C do 427 °C.</li>
                         <li>Okres obrotu: 58 d 15 h 26 m</li>
+                        <li>Okres orbitalny: 87,969 dni</li>
                         <li>Gęstość: 5427 kg/m³</li>
+                        <li>Nie posiada naturalnych satelit</li>
                     </ul>
                 </div>
-                <img src="/images/merkury.jpg" class="solar-system__planet-image">
+                <img src="images/merkury.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -93,10 +99,14 @@
                     <ul>
                         <li>Druga planeta układu słonecznego</li>
                         <li>Typ planety: planeta skalista</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: średnio: 737 K</li>
+                        <li>Okres obrotu: −243,025 d (obrót wsteczny)</li>
+                        <li>Okres orbitalny: 224,701 d</li>
+                        <li>Gęstość: 5243 kg/m³</li>
+                        <li>Nie posiada naturalnych satelit</li>
                     </ul>
                 </div>
-                <img src="/images/wenus.jpg" class="solar-system__planet-image">
+                <img src="images/wenus.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -104,10 +114,14 @@
                     <ul>
                         <li>Trzecia planeta układu słonecznego</li>
                         <li>Typ planety: planeta skalista</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: 185–331 K</li>
+                        <li>Okres obrotu: 23,9345 h</li>
+                        <li>Okres orbitalny: 365,256363004 d</li>
+                        <li>Gęstość: 5513 kg/m³</li>
+                        <li>Naturalny satelita: Księżyc</li>
                     </ul>
                 </div>
-                <img src="/images/ziemia.jpg" class="solar-system__planet-image">
+                <img src="images/ziemia.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -115,10 +129,14 @@
                     <ul>
                         <li>Czwarta planeta układu słonecznego</li>
                         <li>Typ planety: planeta skalista</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: -140.15 °C – 19.85 °C</li>
+                        <li>Okres obrotu: 24,6229 h</li>
+                        <li>Okres orbitalny: 686,980 d</li>
+                        <li>Gęstość: 3933 kg/m³</li>
+                        <li>Naturalne satelity: Deimos i Fobos</li>
                     </ul>
                 </div>
-                <img src="/images/mars.jpeg" class="solar-system__planet-image">
+                <img src="images/mars.jpeg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -126,10 +144,14 @@
                     <ul>
                         <li>Piąta planeta układu słonecznego</li>
                         <li>Typ planety: planeta gazowa</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: 165 K</li>
+                        <li>Okres obrotu: 9,9250 h</li>
+                        <li>Okres orbitalny: 4332,589 d</li>
+                        <li>Gęstość: 1326 kg/m³</li>
+                        <li>Naturalne satelity: 79,<br>w tym Europa, Io, Ganimedes, Kallisto</li>
                     </ul>
                 </div>
-                <img src="/images/jowisz.jpg" class="solar-system__planet-image">
+                <img src="images/jowisz.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -137,10 +159,14 @@
                     <ul>
                         <li>Szósta planeta układu słonecznego</li>
                         <li>Typ planety: planeta gazowa</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: 134 K</li>
+                        <li>Okres obrotu: 10,656 h</li>
+                        <li>Okres orbitalny: 29,457 lat</li>
+                        <li>Gęstość: 687 kg/m³</li>
+                        <li>Naturalne satelity: 82,<br>w tym Tytan, Mimas, Rea</li>
                     </ul>
                 </div>
-                <img src="/images/saturn.jpg" class="solar-system__planet-image">
+                <img src="images/saturn.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -148,10 +174,14 @@
                     <ul>
                         <li>Siódma planeta układu słonecznego</li>
                         <li>Typ planety: planeta gazowa</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: 76 K</li>
+                        <li>Okres obrotu: −17,24 h (obrót wsteczny)</li>
+                        <li>Okres orbitalny: 84,011 lat</li>
+                        <li>Gęstość: 1271 kg/m³</li>
+                        <li>Naturalne satelity: 27,<br>w tym Umbriel, Miranda, Ariel, Oberon</li>
                     </ul>
                 </div>
-                <img src="/images/uran.jpg" class="solar-system__planet-image">
+                <img src="images/uran.jpg" class="solar-system__planet-image">
             </div>
             <div class="solar-system__planet">
                 <div class="solar-system__planet-opis">
@@ -159,11 +189,22 @@
                     <ul>
                         <li>Ósma planeta układu słonecznego</li>
                         <li>Typ planety: planeta gazowa</li>
-                        <li></li>
+                        <li>Temperatura powierzchni: 72 K</li>
+                        <li>Okres obrotu: 16,11 h</li>
+                        <li>Okres orbitalny: 164,79 lat</li>
+                        <li>Gęstość: 1638 kg/m³</li>
+                        <li>Naturalne satelity: 14,<br>w tym Tryton, Proteusz</li>
                     </ul>
                 </div>
-                <img src="/images/neptun.jpg" class="solar-system__planet-image">
+                <img src="images/neptun.jpg" class="solar-system__planet-image">
             </div>
+            <div class="solar-system__planet bonus js-solar-system__planet">
+                <div class="solar-system__planet-bonus">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yxVMhKt-cvI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <img src="images/bonus.jpg" class="solar-system__planet-image"><!--Photo by Jongsun Lee on Unsplash-->
+            </div>
+            
 
         </div>
     </section>
@@ -172,50 +213,29 @@
         <div class="gallery__content">
             <h1 class="gallery__header">Galeria</h1>
             <div class="gallery__container">
-                <img src="/images/1.jpg" class="gallery__item">
-                <img src="/images/2.jpg" class="gallery__item">
-                <img src="/images/3.jpg" class="gallery__item">
-                <img src="/images/4.jpg" class="gallery__item">
-                <img src="/images/5.jpg" class="gallery__item">
-                <img src="/images/6.jpg" class="gallery__item">
-                <img src="/images/7.jpg" class="gallery__item">
-                <img src="/images/1.jpg" class="gallery__item">
-                <img src="/images/2.jpg" class="gallery__item">
-                <img src="/images/3.jpg" class="gallery__item">
-                <img src="/images/4.jpg" class="gallery__item">
+                <img src="images/1.jpg" class="gallery__item">
+                <img src="images/2.jpg" class="gallery__item">
+                <img src="images/3.jpg" class="gallery__item">
+                <img src="images/4.jpg" class="gallery__item">
+                <img src="images/5.jpg" class="gallery__item">
+                <img src="images/6.jpg" class="gallery__item">
+                <img src="images/7.jpg" class="gallery__item">
+                <img src="images/8.jpg" class="gallery__item">
+                <img src="images/9.jpg" class="gallery__item">
+                <img src="images/10.jpg" class="gallery__item">
             </div>
         </div>
     </section>
     <section class="quiz" id="quiz">
         <h1 class="quiz__header">Quiz</h1>
-        <div class="quiz__container">
-            <form>
-                <ol>
-                    <li>
-                        <p>Planetą gazową nie jest:</p>
-                        <input type="radio" name="first" id="uran" value="uran"><label for="uran">Uran</label>
-                        <input type="radio" name="first" id="wenus" value="wenus"><label for="wenus">Wenus</label>
-                        <input type="radio" name="first" id="neptun" value="neptun"><label for="neptun">Neptun</label>
-                       
-                    </li>
-                    <li>
-                        <p>
-                            Pierwszą planetą układu słonecznego jest:</p>
-                        <input type="radio" name="second" id="mars" value="mars"><label for="mars">Mars</label>
-                        <input type="radio" name="second" id="uran" value="uran"><label for="uran">Uran</label>
-                        <input type="radio" name="second" id="mercury" value="mercury"><label
-                            for="mercury">Merkury</label>
-                          
-                    </li>
-
-                </ol>
-                <button type="submit">Sprawdź</button>
-            </form>
-        </div>
+        
+        <div class="quiz__container js-quiz__container">
+        <button class="quiz__button button">START</button>
+     </div>
     </section>
+    <footer><div class="footer">&copy; 2020 K. Duda. All Rights Reserved.</div></footer>
 
-
-
+<script src="script.js"></script>
 </body>
 
 </html>
