@@ -28,50 +28,67 @@ var pole = document.querySelector(".js-solar-system__planet");
     var pytanie = document.querySelector("quiz__questions");
     var pytania = [
         ["Planetą gazową nie jest:", "Uran", "Wenus", "Neptun", "Wenus" ],
+        ["Pluton jest:", "Kometą", "Asteroidą", "Planetą karłowatą", "Planetą karłowatą"],
         ["Pierwszą planetą układu słonecznego jest:", "Mars", "Uran", "Merkury", "Merkury"],
         ["Deimos to naturalny satelita:", "Jowisza", "Ziemii", "Marsa", "Marsa"],
         ["Która planeta nie obraca się w sposób wsteczny:", "Mars", "Wenus", "Uran", "Mars"],
+        ["Jowisz to:", "Gazowy olbrzym", "Planeta karłowata", "Planeta gwiezdna", "Gazowy olbrzym"],
         ["Która planeta ma najwięcej naturalnych satelitów:", "Jowisz", "Ziemia", "Saturn", "Saturn"],
         ["Wenus to planeta:", "Gazowa", "Skalista", "Pyłowa", "Skalista"],
+        ["Która planeta okrąża Słońce co 30 lat:", "Mars", "Saturn", "Neptun", "Saturn"],
         ["W naszym Układzie Słonecznym znajduje się:", "10 planet", "9 planet", "8 planet", "8 planet"],
         ["Pas obiektów skalno-lodowych za orbitą Neptuna to:", "Mały Obłok Magellana", "Pas Kuipera", "Galaktyka Andromedy", "Pas Kuipera"],
+        ["Naturalny satelita Wenus to:", "Io", "Europa", "Wenus nie posiada księżyca", "Wenus nie posiada księżyca"],
         ["Nasz Układ Słoneczny znajduje się w galaktyce:", "Galaktyka Trójkąta", "Wielki Obłok Magellana", "Droga Mleczna", "Droga Mleczna"],
     ];//pytanie; odpowiedz;odpowiedz;odpowiedz;poprawna odpowiedz
     
     function wyswietl_pytanie(i) {
-        quiz_questions.innerHTML = "<h3 class='quiz__question'>"+pytania[i][0]+"</h3><label class='quiz__item'><input type='radio' name='astro' value='"+pytania[i][1]+"'>"+pytania[i][1]+"</label><label class='quiz__item'><input type='radio' name='astro' value='"+pytania[i][2]+"'>"+pytania[i][2]+"</label><label  class='quiz__item'><input type='radio' name='astro' value='"+pytania[i][3]+"'>"+pytania[i][3]+"</label><div class='massage'></div><button class='check button'>Sprawdź</button>";
-        /*var massage = document.createElement("DIV");
-        var quiz_question = document.querySelector(".quiz__question");
-        quiz_question.appendChild(massage);*/
+        quiz_questions.innerHTML = "<h3 class='quiz__question'>"+pytania[i][0]+"</h3><label class='quiz__item'><input class='option'type='radio' name='astro' value='"+pytania[i][1]+"'>"+pytania[i][1]+"<span class='checkmark'></span></label><label class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][2]+"'>"+pytania[i][2]+"<span class='checkmark'></span></label><label  class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][3]+"'>"+pytania[i][3]+"<span class='checkmark'></span></label><div class='massage'></div><button class='check button'>Sprawdź</button>";
         var massage = document.querySelector(".massage");
 
-
+//sprawdzamy czy wybrana opcja jest poprawna
         var sprawdz = document.querySelector(".check");
         sprawdz.addEventListener("click", function() {
-            var answer = document.querySelector('input[name="astro"]:checked').value;
             var correct = pytania[i][4];
-    
-            if (answer == correct) {
-                document.querySelector(".check").style.display = "none";
-                massage.innerHTML = "<p class='good'>Poprawna odpowiedź</p><button class='button' id='next'>Następne pytanie</button>";
-                var next = document.querySelector("#next");
-                next.addEventListener("click", function() {
-                    next.style.display="none";
-                    massage.innerHTML = "";
-                    if(i+1<pytania.length){
-                        wyswietl_pytanie(i+1);
+            
+            if(document.querySelector('input[name="astro"]:checked')==null){//sprawdza czy zaznaczono jakąs odpowiedź
+                massage.innerHTML = "<p class='null'>Nic nie zaznaczyłeś</p>";
+            }else{
+                var answer = document.querySelector('input[name="astro"]:checked').value;
+                    if (answer == correct) {                        
+                        var options = document.getElementsByClassName('option');
+                        var quiz_item = document.getElementsByClassName('quiz__item');
+                        //pętla do oznaczenia pozostałych opcji jako nieaktywne
+                        for(var j=0; j< options.length; j++){
+                            if(!options[j].checked){
+                                options[j].disabled = true;
+                                quiz_item[j].classList.add("disabled");
+                            } 
+                        }
+                        massage.innerHTML = "<p class='good'>Poprawna odpowiedź</p>";
+                        document.querySelector(".check").innerHTML = "Następne pytanie";
+                        var next = document.querySelector(".check");
+                        next.addEventListener("click", function() {//funkcja do wyświetlania kolejnych pytań z tablicy
+                            massage.innerHTML = "";
+                            if(i+1<pytania.length){
+                                wyswietl_pytanie(i+1);
+                            }
+                            else{
+                                quiz_questions.innerHTML = "<p class='koniec'>Koniec :)</p><button class='again button'>Jeszcze raz?</button>";
+                                var again = document.querySelector(".again");
+                                again.addEventListener("click", function () {    
+                                    wyswietl_pytanie(0);
+                                });
+                            }
+                        });
                     }
-                    else{
-                        quiz_questions.innerHTML = "<p class='koniec'>Koniec :)</p>";
+                    else {
+                        massage.innerHTML = "<p class='bad'>Źle! Spróbuj jeszcze raz</p>";
+                        }
                     }
-                });
-            }
-            else {
-                massage.innerHTML = "<p class='bad'>Źle! Spróbuj jeszcze raz</p>";
-                }
         });
     }
-    
+    //funkcja do wyświetlenia quizu
     btn.addEventListener("click", function () {
         btn.style.display = "none";    
         wyswietl_pytanie(0);
