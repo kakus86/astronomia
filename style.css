@@ -598,7 +598,7 @@ body {
 	}
 	.quiz__questions {
 		font-size: 15px;
-		padding: 20px;
+		padding: 10px 5px;
 	
 	}
 	
@@ -610,11 +610,12 @@ body {
 	.quiz__item{
 		margin: 5px 0;
 		font-size: 15px;
-		padding: 10px 0 10px 50px;
+		padding: 5px 5px 5px 45px;
 	}
 	.checkmark{
 		background-size: 60%;
 		background-repeat: no-repeat;
+		top: 11px;
 	}
 	.massage {
 		width: 95%;
