@@ -404,6 +404,7 @@ body {
 	position: absolute;
 	font-size: 40px;
 	border: 2px solid #fdd4d4;
+	z-index: 1;
 }
 .button:hover {
 	border: 1px solid #fdd4d4;
