@@ -198,19 +198,21 @@ body {
 }
 
 .solar-system {
-	width: 100vw;
+	width: 100%;
 	min-height: 100vh;
-	margin: 30px 0px;
+	margin: 20px 0px;
 	text-align: justify;
+	padding-top: 2vw;
 }
 
 .solar-system__header {
 	text-align: center;
 	margin: 20vh auto 50px;
+	font-size: 30px;
 }
 
 .solar-system__image {
-	width: 100vw;
+	width: 100%;
 	object-fit: cover;
 }
 
@@ -219,7 +221,7 @@ body {
 }
 
 .solar-system__container {
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -297,23 +299,28 @@ body {
 		cursor: pointer;
 		font-size: 10px;
 	}
-	.solar-system__planet-opisl:hover {
-		opacity: 1;
+	.solar-system__planet-opis:hover {
+		opacity: unset;
 	}
 	.solar-system__planet-bonus {
 		width: 296px;
 		height: 196px;
 	}
+	.mobile__opis{
+		opacity: 0.85;
+	}
 }
 
 .gallery {
-	width: 100vw;
+	width: 100%;
 	min-height: max-content;
+	
 }
 
 .gallery__header {
 	text-align: center;
-	margin: 20vh auto 50px;
+	margin: 150px auto 50px;
+	font-size: 30px;
 }
 
 .gallery__content {
@@ -358,7 +365,7 @@ body {
 
 @media(max-width:991px) {
 	.gallery__header {
-		margin: 40px auto 20px;
+		margin: 40px auto;
 	}
 	.gallery__container {
 		animation: photo 50s linear infinite;
@@ -370,30 +377,36 @@ body {
 }
 
 .quiz {
-	width: 100vw;
-	min-height: 100vh;
+	width: 100%;
 	margin: 60px 0px;
+	padding-top: 2vw;
 }
 
 .quiz__header {
 	text-align: center;
 	margin: 20vh auto 50px;
+	font-size: 30px;
 }
 
 .button {
-	padding: 20px;
+	padding: 20px 60px;
 	background-color: #fdd4d4;
 	font-size: 20px;
 	font-weight: bold;
-	margin: 20px;
 	border: 1px solid #fdd4d4;
 	border-radius: 5px;
 	cursor: pointer;
+	
 }
-
+.quiz__button{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	font-size: 40px;
+}
 .button:hover {
 	border: 1px solid #fdd4d4;
-	background-color: transparent;
+	background-image: url("images/small.jpg");
 	color: #fdd4d4;
 }
 
@@ -401,8 +414,8 @@ body {
 	background-image: url("images/small.jpg");
 	border-radius: 10px;
 	padding: 0px 15px;
-	width: 1000px;
-	min-height: 530px;
+	width: 300px;
+	height: 200px;
 	margin: 40px auto;
 	border: 2px solid #fdd4d4;
 	position: relative;
@@ -411,25 +424,42 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-
+@keyframes resize{
+	100%{width:80%;height:500px;}
+}
 .quiz__questions {
 	width: 100%;
 	font-size: 30px;
 	color: #fdd4d4;
 	display: flex;
 	flex-direction: column;
+	opacity: 0;
 }
 
 .quiz__question {
 	width: 100%;
-	margin-left: 20px;
+	padding: 35px 5px 5px 20px;
+	margin:2px;
+	
+}
+@keyframes visibility{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.pojawianie {
+	animation: visibility 3s forwards;
+}
+.pojawianie_pierwsze {
+	animation: visibility 3s 2s forwards;
 }
 
 .quiz__item {
 	display: block;
 	position: relative;
-	padding-left: 45px;
-	margin: 15px 0 15px 12px;
+	padding: 20px 0 20px 55px;
+	background-color: #000000;
+	margin: 5px 5px;
 	cursor: pointer;
 	font-size: 22px;
 	-webkit-user-select: none;
@@ -437,8 +467,12 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 	line-height: 32px;
+	border: 1px solid transparent;
+	border-radius:5px;
 }
-
+.quiz__item:hover{
+	border: 1px solid #fdd4d4;
+}
 /* Ukrycie domyślnego znaku inputa radio */
 
 .quiz__item input {
@@ -453,8 +487,8 @@ body {
 
 .checkmark {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 22px;
+	left: 15px;
 	height: 25px;
 	width: 25px;
 	background-image: url(images/radio.png);
@@ -479,7 +513,7 @@ body {
 
 .massage {
 	width: 50%;
-	min-height: 120px;
+	min-height: 70px;
 	margin: 0 auto;
 	padding: 5px;
 	text-align: center;
@@ -500,6 +534,7 @@ body {
 	animation: show 1s;
 	border-radius: 5px;
 	padding: 10px;
+	margin:3px;
 }
 
 .null {
@@ -507,6 +542,7 @@ body {
 	border-radius: 5px;
 	padding: 10px;
 	animation: show 1s;
+	margin:3px;
 }
 
 .bad {
@@ -514,6 +550,7 @@ body {
 	border-radius: 5px;
 	padding: 10px;
 	animation: show 1s;
+	margin:3px;
 }
 
 @keyframes show {
@@ -534,34 +571,45 @@ body {
 
 @media(max-width:991px) {
 	.quiz {
-		padding: 5px;
 		width: 100%;
+	}
+	.quiz__header{
+		margin: 0;
 	}
 	.button {
 		font-weight: normal;
 	}
 	.quiz__container {
-		width: 100%;
-		min-height: 530px;
+		width: 80%;
+		
+	}
+	.quiz__mobile{
+		height: max-content !important;
+		
 	}
 	.quiz__questions {
 		font-size: 20px;
+		max-height: max-content;
 	}
 	.quiz__question {
-		margin: 25px 0;
+		padding: 0;
+		margin: 5px 0;
 		margin-left: unset;
 	}
 	.quiz__item{
-		margin: 25px 0;
+		margin: 5px 0;
 	}
 	.massage {
 		width: 95%;
 		font-size: 20px;
 	}
+	.again{
+		width: 100%;
+	}
 }
 
 .footer {
-	width: 100vw;
+	width: 100%;
 	padding: 5px 0px;
 	color: #000;
 	background-color: #fdd4d4;

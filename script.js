@@ -43,8 +43,13 @@ var pole = document.querySelector(".js-solar-system__planet");
     ];//pytanie; odpowiedz;odpowiedz;odpowiedz;poprawna odpowiedz
     
     function wyswietl_pytanie(i) {
+        
         quiz_questions.innerHTML = "<h3 class='quiz__question'>"+pytania[i][0]+"</h3><label class='quiz__item'><input class='option'type='radio' name='astro' value='"+pytania[i][1]+"'>"+pytania[i][1]+"<span class='checkmark'></span></label><label class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][2]+"'>"+pytania[i][2]+"<span class='checkmark'></span></label><label  class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][3]+"'>"+pytania[i][3]+"<span class='checkmark'></span></label><div class='massage'></div><button class='check button'>Sprawdź</button>";
         var massage = document.querySelector(".massage");
+
+        quiz_questions.offsetHeight;
+        quiz_questions.classList.add("pojawianie");
+      //  quiz_questions.classList.toggle("poj");
 
 //sprawdzamy czy wybrana opcja jest poprawna
         var sprawdz = document.querySelector(".check");
@@ -65,13 +70,18 @@ var pole = document.querySelector(".js-solar-system__planet");
                                 quiz_item[j].classList.add("disabled");
                             } 
                         }
+                        sprawdz.style.visibility="hidden";
                         massage.innerHTML = "<p class='good'>Poprawna odpowiedź</p>";
-                        document.querySelector(".check").innerHTML = "Następne pytanie";
-                        var next = document.querySelector(".check");
-                        next.addEventListener("click", function() {//funkcja do wyświetlania kolejnych pytań z tablicy
+                        //funkcja do wyświetlania kolejnych pytań z tablicy
+                            
+                            setTimeout(function kolejne_pytanie(){
                             massage.innerHTML = "";
+                            
                             if(i+1<pytania.length){
+                                quiz_questions.offsetHeight;
+                                quiz_questions.classList.remove("pojawianie");
                                 wyswietl_pytanie(i+1);
+                              
                             }
                             else{
                                 quiz_questions.innerHTML = "<p class='koniec'>Koniec :)</p><button class='again button'>Jeszcze raz?</button>";
@@ -80,7 +90,7 @@ var pole = document.querySelector(".js-solar-system__planet");
                                     wyswietl_pytanie(0);
                                 });
                             }
-                        });
+                        }, 1500);;
                     }
                     else {
                         massage.innerHTML = "<p class='bad'>Źle! Spróbuj jeszcze raz</p>";
@@ -90,9 +100,13 @@ var pole = document.querySelector(".js-solar-system__planet");
     }
     //funkcja do wyświetlenia quizu
     btn.addEventListener("click", function () {
-        btn.style.display = "none";    
+        btn.style.display = "none";  
+        quiz_container.style.animation = "resize 2s forwards";
+        quiz_container.classList.add("quiz__mobile");
+        quiz_questions.classList.add("pojawianie_pierwsze");
         wyswietl_pytanie(0);
-
+        quiz_questions.offsetHeight;
+        quiz_questions.classList.remove("pojawianie_pierwsze");
     });
     
 
