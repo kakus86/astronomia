@@ -590,7 +590,7 @@ body {
 		
 	}
 	#quiz__mobile{
-		height: max-content !important;
+		height: 650px;
 		
 	}
 	.quiz__questions {
