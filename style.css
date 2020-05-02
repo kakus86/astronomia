@@ -462,20 +462,20 @@ body {
 	left: 0;
 	height: 25px;
 	width: 25px;
-	background-image: url(../images/radio.png);
+	background-image: url(images/radio.png);
 	background-size: 100%;
 }
 
 /* Background inputa po najechaniu myszką */
 
 .quiz__item:hover input~.checkmark {
-	background-image: url(../images/radio-hover.png);
+	background-image: url(images/radio-hover.png);
 }
 
 /* Background kiedy input jest zaznaczony */
 
 .quiz__item input:checked~.checkmark {
-	background-image: url(../images/radio-checked.png);
+	background-image: url(images/radio-checked.png);
 }
 
 .disabled {
