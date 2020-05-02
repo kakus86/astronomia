@@ -589,7 +589,7 @@ body {
 		
 		
 	}
-	.quiz__mobile{
+	#quiz__mobile{
 		height: max-content !important;
 		
 	}

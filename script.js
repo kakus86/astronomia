@@ -102,7 +102,7 @@ var pole = document.querySelector(".js-solar-system__planet");
     btn.addEventListener("click", function () {
         btn.style.display = "none";  
         quiz_container.style.animation = "resize 2s forwards";
-        quiz_container.classList.add("quiz__mobile");
+        quiz_container.id="quiz__mobile";
         quiz_questions.classList.add("pojawianie_pierwsze");
         wyswietl_pytanie(0);
         quiz_questions.offsetHeight;
