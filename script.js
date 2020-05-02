@@ -44,7 +44,7 @@ var pole = document.querySelector(".js-solar-system__planet");
     
     function wyswietl_pytanie(i) {
         
-        quiz_questions.innerHTML = "<h3 class='quiz__question'>"+pytania[i][0]+"</h3><label class='quiz__item'><input class='option'type='radio' name='astro' value='"+pytania[i][1]+"'>"+pytania[i][1]+"<span class='checkmark'></span></label><label class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][2]+"'>"+pytania[i][2]+"<span class='checkmark'></span></label><label  class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][3]+"'>"+pytania[i][3]+"<span class='checkmark'></span></label><div class='massage'></div><button class='check button'>Sprawdź</button>";
+        quiz_questions.innerHTML = "<h3 class='quiz__question'>"+(i+1)+"/"+pytania.length+" "+pytania[i][0]+"</h3><label class='quiz__item'><input class='option'type='radio' name='astro' value='"+pytania[i][1]+"'>"+pytania[i][1]+"<span class='checkmark'></span></label><label class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][2]+"'>"+pytania[i][2]+"<span class='checkmark'></span></label><label  class='quiz__item'><input class='option' type='radio' name='astro' value='"+pytania[i][3]+"'>"+pytania[i][3]+"<span class='checkmark'></span></label><div class='massage'></div><button class='check button'>Sprawdź</button>";
         var massage = document.querySelector(".massage");
 
         quiz_questions.offsetHeight;
