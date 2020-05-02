@@ -583,21 +583,25 @@ body {
 	}
 	.button {
 		font-weight: normal;
+		font-size: 15px;
+		padding: 10px;
+		
+	}
+	.quiz__button{
+		font-size: 30px;
+		background-color: transparent;
+		color: #fdd4d4;
 	}
 	.quiz__container {
 		width: 80%;
-		
-		
-	}
-	#quiz__mobile{
-		height: 650px;
-		
+			
 	}
 	.quiz__questions {
-		font-size: 20px;
+		font-size: 15px;
 		padding: 20px;
 	
 	}
+	
 	.quiz__question {
 		padding: 0;
 		margin: 5px 0;
@@ -605,10 +609,17 @@ body {
 	}
 	.quiz__item{
 		margin: 5px 0;
+		font-size: 15px;
+		padding: 10px 0 10px 50px;
+	}
+	.checkmark{
+		background-size: 60%;
+		background-repeat: no-repeat;
 	}
 	.massage {
 		width: 95%;
-		font-size: 20px;
+		font-size: 15px;
+		min-height: 60px;
 	}
 	.again{
 		width: 100%;
