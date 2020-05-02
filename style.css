@@ -403,6 +403,7 @@ body {
 	height: 100%;
 	position: absolute;
 	font-size: 40px;
+	border: 2px solid #fdd4d4;
 }
 .button:hover {
 	border: 1px solid #fdd4d4;
@@ -572,15 +573,18 @@ body {
 @media(max-width:991px) {
 	.quiz {
 		width: 100%;
+		height: max-content;
 	}
 	.quiz__header{
 		margin: 0;
+		padding-bottom: 10px;
 	}
 	.button {
 		font-weight: normal;
 	}
 	.quiz__container {
 		width: 80%;
+		
 		
 	}
 	.quiz__mobile{
@@ -589,6 +593,7 @@ body {
 	}
 	.quiz__questions {
 		font-size: 20px;
+		padding: 20px;
 		max-height: max-content;
 	}
 	.quiz__question {
