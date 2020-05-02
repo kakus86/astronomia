@@ -27,6 +27,9 @@ var pole = document.querySelector(".js-solar-system__planet");
     quiz_container.appendChild(quiz_questions); //dodaje diva do dokumentu
     var pytanie = document.querySelector("quiz__questions");
     var pytania = [
+        ["Pas obiektów skalno-lodowych za orbitą Neptuna to:", "Mały Obłok Magellana", "Pas Kuipera", "Galaktyka Andromedy", "Pas Kuipera"],
+        ["Naturalny satelita Wenus to:", "Io", "Europa", "Wenus nie posiada księżyca", "Wenus nie posiada księżyca"],
+        ["Nasz Układ Słoneczny znajduje się w galaktyce:", "Galaktyka Trójkąta", "Wielki Obłok Magellana", "Droga Mleczna", "Droga Mleczna"],
         ["Planetą gazową nie jest:", "Uran", "Wenus", "Neptun", "Wenus" ],
         ["Pluton jest:", "Kometą", "Asteroidą", "Planetą karłowatą", "Planetą karłowatą"],
         ["Pierwszą planetą układu słonecznego jest:", "Mars", "Uran", "Merkury", "Merkury"],
@@ -37,9 +40,6 @@ var pole = document.querySelector(".js-solar-system__planet");
         ["Wenus to planeta:", "Gazowa", "Skalista", "Pyłowa", "Skalista"],
         ["Która planeta okrąża Słońce co 30 lat:", "Mars", "Saturn", "Neptun", "Saturn"],
         ["W naszym Układzie Słonecznym znajduje się:", "10 planet", "9 planet", "8 planet", "8 planet"],
-        ["Pas obiektów skalno-lodowych za orbitą Neptuna to:", "Mały Obłok Magellana", "Pas Kuipera", "Galaktyka Andromedy", "Pas Kuipera"],
-        ["Naturalny satelita Wenus to:", "Io", "Europa", "Wenus nie posiada księżyca", "Wenus nie posiada księżyca"],
-        ["Nasz Układ Słoneczny znajduje się w galaktyce:", "Galaktyka Trójkąta", "Wielki Obłok Magellana", "Droga Mleczna", "Droga Mleczna"],
     ];//pytanie; odpowiedz;odpowiedz;odpowiedz;poprawna odpowiedz
     
     function wyswietl_pytanie(i) {
