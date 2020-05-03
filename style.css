@@ -96,7 +96,7 @@ body {
 		opacity: 1;
 	}
 	100% {
-		top: 400px;
+		top: 500px;
 		opacity: 0;
 	}
 }
