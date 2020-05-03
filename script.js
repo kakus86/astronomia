@@ -80,6 +80,7 @@ var pole = document.querySelector(".js-solar-system__planet");
                             if(i+1<pytania.length){
                                 quiz_questions.offsetHeight;
                                 quiz_questions.classList.remove("pojawianie");
+                                quiz_questions.style.animationDelay="0s"
                                 wyswietl_pytanie(i+1);
                               
                             }
@@ -102,10 +103,12 @@ var pole = document.querySelector(".js-solar-system__planet");
     btn.addEventListener("click", function () {
         btn.style.display = "none";  
         quiz_container.style.animation = "resize 2s forwards";
-        quiz_questions.classList.add("pojawianie_pierwsze");
-        wyswietl_pytanie(0);
         quiz_questions.offsetHeight;
-        quiz_questions.classList.remove("pojawianie_pierwsze");
+        quiz_questions.classList.add("pojawianie");
+        quiz_questions.style.animationDelay="2s"
+        wyswietl_pytanie(0);
+        
+        
     });
     
 

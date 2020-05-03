@@ -453,9 +453,6 @@ body {
 .pojawianie {
 	animation: visibility 3s forwards;
 }
-.pojawianie_pierwsze {
-	animation: visibility 3s 2s forwards;
-}
 
 .quiz__item {
 	display: block;
